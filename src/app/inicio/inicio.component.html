@@ -1,0 +1,20 @@
+<form>
+    <div class="form-group">
+        <small id="emailHelp" class="form-text text-muted">Ingrese su usuario de acceso.</small>
+      <input type="text" class="form-control" id="exampleInputEmail1" 
+      aria-describedby="emailHelp" name="usuario" [(ngModel)]="objUsuModelo.usuario" 
+      placeholder="Escriba aquí...">
+    </div>
+
+    <div class="form-group">
+      <small id="emailHelp" class="form-text text-muted">Ingrese su clave de acceso.</small>
+      <input type="password" class="form-control" 
+      id="exampleInputPassword1" name="clave" [(ngModel)]="objUsuModelo.clave" 
+      placeholder="Escriba aquí...">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="button" (click)="llamaAlHome()" class="btn btn-primary">Iniciar</button>
+  </form>
