@@ -6,22 +6,30 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UsuarioComponent } from './usuario/usuario.component';
-import { InicioComponent } from './inicio/inicio.component';
 import { NofoundComponent } from './nofound/nofound.component';
 import { EqiiComponent } from './eqii/eqii.component';
 import { ChacaoComponent } from './chacao/chacao.component';
 
 // Importacion del modulo para trabajar con formularios en angular.
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { PrincipalComponent } from './principal/principal.component';
+import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './menu/menu.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ListaUsuComponent } from './usuario/lista-usu/lista-usu.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioComponent,
-    InicioComponent,
     NofoundComponent,
     EqiiComponent,
-    ChacaoComponent
+    ChacaoComponent,
+    PrincipalComponent,
+    LoginComponent,
+    MenuComponent,
+    PerfilComponent,
+    ListaUsuComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioComponent implements OnInit {
 
-  constructor() { }
+  private parametro: string;
+
+  constructor() { 
+    this.parametro = "Listado de usuarios"
+  }
 
   ngOnInit() {
   }

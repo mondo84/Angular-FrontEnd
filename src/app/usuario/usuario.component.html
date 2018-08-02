@@ -1,3 +1,50 @@
-<p>
-  usuario works!
-</p>
+<!-- Menu, disponible para este componente -->
+<app-menu></app-menu>
+
+<div class="container" >
+
+    <div class="row" >
+  
+      <div class="col-sm-3" style="background-color: rgb(200, 200, 200) " >
+          <app-perfil></app-perfil>
+      </div>
+  
+      <div class="col-sm-8" >
+
+        <h1>Mantenimiento de Usuarios</h1>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item active" >
+
+                    <!-- <a [routerLink]="[ '/listadou', this.parametro ]">-->
+                    <a [routerLink]="[ '/listadou' ]">
+                        <button class="btn btn-primary btn-sm mt-2 mr-2 mb-2"  >Listado</button>
+                    </a>
+              </li>
+              <li class="nav-item">
+                    <a [routerLink]="[ '/crearu' ]" >
+                        <button class="btn btn-primary btn-sm mt-2 mr-2 mb-2"  >Crear Usuario</button>
+                    </a>
+              </li>
+              <li class="nav-item">
+                    <a [routerLink]="[ '/perfilu' ]" >
+                        <button class="btn btn-primary btn-sm mt-2 mr-2 mb-2"  >Perfil de usuario</button>
+                    </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+            
+          
+            <!-- <app-lista-usu></app-lista-usu> -->
+
+        
+
+      </div>
+
+  
+    </div>  
+  
+  </div>
