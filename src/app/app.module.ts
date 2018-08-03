@@ -16,7 +16,9 @@ import { PrincipalComponent } from './principal/principal.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { ListaUsuComponent } from './usuario/lista-usu/lista-usu.component'
+import { ListaUsuComponent } from './usuario/lista-usu/lista-usu.component';
+import { CrearUsuComponent } from './usuario/crear-usu/crear-usu.component';
+import { PerfilUsuComponent } from './usuario/perfil-usu/perfil-usu.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ListaUsuComponent } from './usuario/lista-usu/lista-usu.component'
     LoginComponent,
     MenuComponent,
     PerfilComponent,
-    ListaUsuComponent
+    ListaUsuComponent,
+    CrearUsuComponent,
+    PerfilUsuComponent
   ],
   imports: [
     BrowserModule,
