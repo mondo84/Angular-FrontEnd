@@ -18,7 +18,8 @@ import { MenuComponent } from './menu/menu.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ListaUsuComponent } from './usuario/lista-usu/lista-usu.component';
 import { CrearUsuComponent } from './usuario/crear-usu/crear-usu.component';
-import { PerfilUsuComponent } from './usuario/perfil-usu/perfil-usu.component'
+import { PerfilUsuComponent } from './usuario/perfil-usu/perfil-usu.component';
+import { DashboardComponent } from './usuario/dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PerfilUsuComponent } from './usuario/perfil-usu/perfil-usu.component'
     PerfilComponent,
     ListaUsuComponent,
     CrearUsuComponent,
-    PerfilUsuComponent
+    PerfilUsuComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

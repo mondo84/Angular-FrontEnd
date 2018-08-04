@@ -16,6 +16,7 @@ import { componentNeedsResolution } from '../../node_modules/@angular/core/src/m
 import { ConditionalExpr } from '../../node_modules/@angular/compiler';
 import { CrearUsuComponent } from './usuario/crear-usu/crear-usu.component';
 import { PerfilUsuComponent } from './usuario/perfil-usu/perfil-usu.component';
+import { DashboardComponent } from './usuario/dashboard/dashboard.component';
 
 // Constante que almacena las rutas.
 const rutasDeComponentes: Routes =[
@@ -27,9 +28,12 @@ const rutasDeComponentes: Routes =[
     // Ruta 'usuario' con rutas hijas (usuario/listado, usuario/crear, usuario/perfil)
     { path: 'usuario', component: UsuarioComponent, 
         children: [
+                    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+                    { path: 'dashboard', component: DashboardComponent,  },
                     { path: 'listadou', component: ListaUsuComponent },
                     { path: 'crear', component: CrearUsuComponent },
-                    { path: 'perfil', component: PerfilUsuComponent }
+                    { path: 'perfil', component: PerfilUsuComponent },
+                    { path: '**', component: NofoundComponent }
                   ] },
 
     //{ path: 'listadou', component: ListaUsuComponent },

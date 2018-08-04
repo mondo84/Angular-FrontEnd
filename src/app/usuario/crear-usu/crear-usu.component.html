@@ -1,3 +1,38 @@
-<p>
-  crear-usu works!
-</p>
+
+<div class="container" >
+  
+    <form action="" >
+        <div class="row mt-4  " style="background-color: rgb(250, 250, 250)" >
+
+          <div class="col-sm-4" >
+            <input type="text" name="nombre" class="form-control mt-2 " minlength="3" placeholder="Ingrese su nombre.">
+            <input type="text" name="p00" class="form-control mt-2" minlength="5" placeholder="Ingrese su P00."/>
+            <!-- <select [(ngModel)]="selectedValue" > -->
+            <select name="nivel" class="form-control mt-2 mb-2" >
+                <!-- <option *ngFor="#c of countries" value="c.id">{{c.name}}</option> -->
+                <option selected value="0"> Seleccione </option>
+                <option value="2"> Usuario </option>
+                <option value="1"> Administrador </option>
+            </select>
+            <!-- <input type="" name="nivel" class="form-control mt-2" placeholder="Ingrese su nivel."/> -->
+          </div>
+          <!-- <div class="form-group"> -->
+          <div class="col-sm-4" >
+            <input type="text" name="apellido" class="form-control mt-2" minlength="3" placeholder="Ingrese su apellido.">
+            <input type="text" name="correo" class="form-control mt-2" minlength="5" placeholder="Ingrese su correo."/>
+            <input type="submit" (click)="guardar()"  class="btn btn-primary mt-2" value="Guardar" >
+
+            <a [routerLink]="[ '/usuario/']">
+              <input type="submit" class="btn btn-danger mt-2 ml-2" value="Cerrar formulario" >
+            </a>
+          </div>
+
+          <div class="col-sm-3" >
+              <input type="text" name="cedula" class="form-control mt-2" minlength="6" placeholder="Ingrese su cedula.">
+              <input type="text" name="usuario" class="form-control mt-2" minlength="3" placeholder="Ingrese su usuario."/>    
+          </div>
+        </div>
+        
+      </form>
+
+</div>
