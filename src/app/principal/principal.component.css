@@ -1,0 +1,23 @@
+.anchoMenu{
+    width: 100%
+}
+
+.estilo{
+    /*background-color: rgba(40, 130, 255, .1); */
+    background-color: rgba(128, 0, 128, 0.880); 
+    color: rgb(250, 250, 250);
+}
+
+.fondoPerfil{
+    
+    background-color: rgba(30, 30, 30, .5);
+    color: rgb(220, 220, 220);
+
+}
+
+.barraPerfil{
+
+    height: 600px; /* Configura la altura del div */
+    overflow-y: scroll; /* Agerga el scroll verticar cuando el texto supera el tamaño del div. */
+
+}

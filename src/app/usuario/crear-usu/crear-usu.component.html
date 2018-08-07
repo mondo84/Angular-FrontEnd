@@ -1,14 +1,22 @@
 
-<div class="container" >
-  
-    <form action="" >
-        <div class="row mt-4  " style="background-color: rgb(250, 250, 250)" >
+<!-- <div class="container" > -->
+
+<form action="" >
+        <div class="row estilo">
 
           <div class="col-sm-4" >
-            <input type="text" name="nombre" class="form-control mt-2 " minlength="3" placeholder="Ingrese su nombre.">
-            <input type="text" name="p00" class="form-control mt-2" minlength="5" placeholder="Ingrese su P00."/>
+            <label class="mt-2 " >Nombre:</label>
+            <input type="text" name="nombre" class="form-control " minlength="3" placeholder="Ingrese su nombre.">
+            
+            <label class="mt-2" >Cedula:</label>
+            <input type="text" name="cedula" class="form-control" minlength="6" placeholder="Ingrese su cedula.">
+            
+            <label class="mt-2" >P00:</label>
+            <input type="text" name="p00" class="form-control" minlength="5" placeholder="Ingrese su P00."/>
+            
+            <label class="mt-2" >Nivel de usuario:</label>
             <!-- <select [(ngModel)]="selectedValue" > -->
-            <select name="nivel" class="form-control mt-2 mb-2" >
+            <select name="nivel" class="form-control mb-2" >
                 <!-- <option *ngFor="#c of countries" value="c.id">{{c.name}}</option> -->
                 <option selected value="0"> Seleccione </option>
                 <option value="2"> Usuario </option>
@@ -18,21 +26,31 @@
           </div>
           <!-- <div class="form-group"> -->
           <div class="col-sm-4" >
-            <input type="text" name="apellido" class="form-control mt-2" minlength="3" placeholder="Ingrese su apellido.">
-            <input type="text" name="correo" class="form-control mt-2" minlength="5" placeholder="Ingrese su correo."/>
-            <input type="submit" (click)="guardar()"  class="btn btn-primary mt-2" value="Guardar" >
-
-            <a [routerLink]="[ '/usuario/']">
-              <input type="submit" class="btn btn-danger mt-2 ml-2" value="Cerrar formulario" >
-            </a>
+            <label class="mt-2" >Apellido:</label>
+            <input type="text" name="apellido" class="form-control" minlength="3" placeholder="Ingrese su apellido.">
+            
+            <label class="mt-2" >Correo:</label>
+            <input type="text" name="correo" class="form-control" minlength="5" placeholder="Ingrese su correo."/>
+            
+            <label class="mt-2" >Usuario:</label>
+            <input type="text" name="usuario" class="form-control" minlength="3" placeholder="Ingrese su usuario."/>    
+            
           </div>
 
-          <div class="col-sm-3" >
-              <input type="text" name="cedula" class="form-control mt-2" minlength="6" placeholder="Ingrese su cedula.">
-              <input type="text" name="usuario" class="form-control mt-2" minlength="3" placeholder="Ingrese su usuario."/>    
-          </div>
         </div>
-        
-      </form>
 
-</div>
+        <div class="row estilo">
+          <div class="col" >
+              <input type="submit" (click)="guardar()"  class="btn btn-primary btn-sm mt-4 mb-4" value="Guardar" >
+
+              <a [routerLink]="[ '/usuario/']">
+                <input type="submit" class="btn btn-danger btn-sm mt-4 mb-4 ml-2" value="Cerrar formulario" >
+              </a>
+          </div>
+
+        
+      </div>
+</form>
+      <!-- Se anexa el pie de pagina -->
+      <app-footer></app-footer>
+<!-- </div> -->

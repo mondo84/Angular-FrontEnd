@@ -19,7 +19,9 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { ListaUsuComponent } from './usuario/lista-usu/lista-usu.component';
 import { CrearUsuComponent } from './usuario/crear-usu/crear-usu.component';
 import { PerfilUsuComponent } from './usuario/perfil-usu/perfil-usu.component';
-import { DashboardComponent } from './usuario/dashboard/dashboard.component'
+import { DashboardComponent } from './usuario/dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContenidoComponent } from './principal/contenido/contenido.component'
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { DashboardComponent } from './usuario/dashboard/dashboard.component'
     ListaUsuComponent,
     CrearUsuComponent,
     PerfilUsuComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent,
+    ContenidoComponent
   ],
   imports: [
     BrowserModule,

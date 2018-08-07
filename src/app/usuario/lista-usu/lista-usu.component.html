@@ -1,39 +1,52 @@
-<div class="container" >
 
-<a [routerLink]="[ '/usuario' ]">
-  <button class="btn btn-danger btn-sm mt-2 mb-1" >Cerrar listado de usuarios</button>
-</a>
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
-        <th scope="col">Cedula</th>
-        <th scope="col">Correo</th>
-        <th scope="col">P00</th>
-        <th scope="col">Usuario</th>
-        <th scope="col">Clave</th>
-        <th scope="col">Nivel</th>
-        <th scope="col">Clave</th>
-        <th scope="col">Nivel</th>
-        <th scope="col">Nivel</th>
-        <th scope="col">Nivel</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Yesid</td>
-        <td>Davila</td>
-        <td scope="row">17756082</td>
-        <td>ydavil02@cantv.com.ve</td>
-        <td>145855</td>
-        <td>ydavil02</td>
-        <td>123</td>
-        <td>admin.</td>
-        <td>123</td>
-        <td>admin.</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="row estiloLista" >
 
+  <div class="col estilo_div ">
+    <a [routerLink]="[ '/usuario' ]">
+      <button class="btn btn-danger btn-sm mt-5 mb-1 ml-1" >Cerrar listado de usuarios</button>
+    </a>
+
+    <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Cedula</th>
+            <th scope="col">Correo</th>
+            <th scope="col">P00</th>
+            <th scope="col">Usuario</th>
+            <!-- <th scope="col">Clave</th> -->
+            <th scope="col">Nivel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--<tr *ngFor="let usuario of usuarios; let i = index" >  Ciclo for de angular. -->
+          <tr>
+            <td>Yesid</td>
+            <td>Davila</td>
+            <td scope="row">17756082</td>
+            <td>ydavil02@cantv.com.ve</td>
+            <td>145855</td>
+            <td>ydavil02</td>
+            <!-- <td>123</td> -->
+            <td>admin.</td>
+          </tr>
+
+          <tr>
+              <td>Yesid</td>
+              <td>Davila</td>
+              <td scope="row">17756082</td>
+              <td>ydavil02@cantv.com.ve</td>
+              <td>145855</td>
+              <td>ydavil02</td>
+              <!-- <td>123</td> -->
+              <td>admin.</td>
+            </tr>
+            
+        </tbody>
+      </table>
+  </div>
 </div>
+
+<!-- Se anexa el pie de pagina -->
+<app-footer></app-footer>

@@ -1,0 +1,11 @@
+.estiloLista{
+    /* background-color: white; */
+    background-color: rgba(40, 130, 255, .3)
+}
+
+.estilo_div {
+    
+    height: 400px; /* Configura la altura del div */
+    overflow-y: scroll; /* Agerga el scroll verticar cuando el texto supera el tamaño del div. */
+    
+}

@@ -1,14 +1,34 @@
-<div class="container" >
+<div class="row estiloLista" >
 
+  <div class="col" >
     <form>
         <div class="form-group">
-          <label for="formGroupExampleInput">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+            <label >Nombre: </label>
+            <input type="text" class="form-control" placeholder="Cambiar nombre">
+        </div>
+
+        <div class="form-group">
+          <label >Cambiar avatar/foto: </label>
+          <input type="text" class="form-control" placeholder="Cambiar foto de perfil">
         </div>
         <div class="form-group">
-          <label for="formGroupExampleInput2">Another label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+          <label >Clave: </label>
+          <input type="text" class="form-control" placeholder="Ingrese la clave nueva">
         </div>
-      </form>
+        <div class="form-group">
+            <label >Repita clave: </label>
+            <input type="text" class="form-control" placeholder="Repita la clave">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-sm mr-1" >Guardar</button>
+            <button class="btn btn-secondary btn-sm mr-1" >Lipiar campos</button>
+            <button class="btn btn-danger btn-sm" >Cerrar ventana</button>
+        </div>
 
+      </form>
+  </div>
 </div>
+
+
+<!-- Se anexa el pie de pagina -->
+<app-footer></app-footer>
