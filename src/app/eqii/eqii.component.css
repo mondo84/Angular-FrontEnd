@@ -1,0 +1,13 @@
+.estilo{
+    background-color: rgba(128, 0, 128, 0.880); 
+    color: rgb(250, 250, 250);
+}
+
+.estiloMenu{
+    /* background-color: rgba(40, 130, 255, .5); */
+    background-color: rgba(30, 30, 30, .800);
+}
+
+.anchoMenu{
+    width: 100%
+}

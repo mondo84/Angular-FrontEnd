@@ -17,6 +17,10 @@ import { ConditionalExpr } from '../../node_modules/@angular/compiler';
 import { CrearUsuComponent } from './usuario/crear-usu/crear-usu.component';
 import { PerfilUsuComponent } from './usuario/perfil-usu/perfil-usu.component';
 import { DashboardComponent } from './usuario/dashboard/dashboard.component';
+import { DashboardEqComponent } from './eqii/dashboard-eq/dashboard-eq.component';
+import { ListaEqComponent } from './eqii/lista-eq/lista-eq.component';
+import { DashboardChaComponent } from './chacao/dashboard-cha/dashboard-cha.component';
+import { ListaChaComponent } from './chacao/lista-cha/lista-cha.component';
 
 // Constante que almacena las rutas.
 const rutasDeComponentes: Routes =[
@@ -37,8 +41,22 @@ const rutasDeComponentes: Routes =[
                   ] },
 
     //{ path: 'listadou', component: ListaUsuComponent },
-    { path: 'eqii', component: EqiiComponent },
-    { path: 'chacao', component: ChacaoComponent },
+    { path: 'eqii', component: EqiiComponent,
+        children: [
+                    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+                    { path: 'dashboard', component: DashboardEqComponent,  },
+                    { path: 'listadoeq', component: ListaEqComponent,  },
+                    { path: '**', component: NofoundComponent }
+        ] },
+
+    { path: 'chacao', component: ChacaoComponent,
+        children: [
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+            { path: 'dashboard', component: DashboardChaComponent,  },
+            { path: 'listadocha', component: ListaChaComponent,  },
+            { path: '**', component: NofoundComponent }
+        ] },
+
     { path: '**', component: NofoundComponent }
 
 ];

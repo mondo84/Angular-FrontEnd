@@ -1,44 +1,46 @@
-<!-- Menu, disponible para este componente -->
-<app-menu></app-menu>
+<div class="row" >
+  <div class="anchoMenu" > <!-- style="width: 100%" -->
+    <!-- Menu, disponible para este componente -->
+    <app-menu></app-menu>
+  </div>
+</div>
 
-<div class="container" >
-  <hr/>
+<div class="row estilo" >
+  <div class="col"  >
+    <h2 class="ml-4"  >Panel de Equipos II</h2>
+  </div>
+</div>
 
-  <h1>Panel de Equipos II</h1>
+<div class="row ">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  <!-- Este es el menu de la seccion equipos ii -->
+  <div class="col-2 estiloMenu"  >
+    <ul class="nav flex-column ml-1"  >
 
-      <!-- Boton que se activa cuando se colapsa el menu al minimizar. -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link btn btn-primary btn-sm mr-1" href="#">Listado de equipos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-primary btn-sm mr-1" href="#">Agregar equipo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-info btn-sm mr-1" href="#">Reportes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-danger btn-sm mr-1" href="#">Cerrar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <li class="nav-item">
+          <a routerLinkActive="active" class="nav-link btn-info   mb-1 mt-3" 
+          [routerLink]="[ '/eqii/dashboard' ]">Inicio</a>
+      </li>
 
-  <div class="row" >
-    <div class="col-sm-8" >
-        <p>
-          Contenido del componente equipos ii...
-        </p>
-    </div>
+      <li class="nav-item">
+          <a routerLinkActive="active" class="nav-link btn-info   mb-1" 
+          [routerLink]="[ '/eqii/listadoeq' ]">Listado</a>
+      </li>
+      <li class="nav-item">
+          <a routerLinkActive="active" class="nav-link btn-info mb-1" 
+          [routerLink]="[ '/eqii/#' ]" >Disponible</a>
+      </li>
+      <li class="nav-item">
+          <a routerLinkActive="active" class="nav-link btn-info mb-1" 
+          [routerLink]="[ '/eqii/#' ]" >Disponible</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="col" >
+    <!-- Navegacion dentro del div de usuario -->
+    <router-outlet></router-outlet>
   </div>
 
 </div>
-

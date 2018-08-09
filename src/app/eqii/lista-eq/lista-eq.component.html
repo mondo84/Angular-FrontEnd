@@ -1,0 +1,102 @@
+
+<div class="row " >
+
+  <div class="col estilo_div table-responsive">
+    <a [routerLink]="[ '/eqii' ]">
+      <button class="btn btn-danger btn-sm mt-5 mb-1 ml-1" >Cerrar listado de equipos</button>
+    </a>
+
+    <table class="table table-striped table-dark table-sm table-borderless">
+        <thead>
+          <tr class="bg-success textoHeader" >
+            <th>#</th>
+            <th scope="col">Cod. Cantv</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Rack</th>
+            <th scope="col">U-Rack</th>
+            <th> Accion </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--<tr *ngFor="let usuario of usuarios; let i = index" >  Ciclo for de angular. -->
+          <tr *ngFor="let dato of datoExtraido; let i = index" >
+            <td>{{i+1}}</td>
+            <td scope="row">{{dato.codigo}}</td>
+            <td>{{dato.marca}}</td>
+            <td>{{dato.modelo}}</td>
+            <td>{{dato.rack}}</td>
+            <td>{{dato.u_rack}}</td>
+            <td>
+              <!-- <button class="btn btn-danger btn-sm" >Detalle</button> -->
+              <button class="btn btn-warning btn-sm mr-1" (click)="editar(dato)" data-toggle="modal" 
+              data-target=".bd-example-modal-lg">Detalle/Editar</button>
+
+              <button class="btn btn-danger btn-sm mr-1" (click)="borrar()" data-toggle="modal" 
+              data-target=".bd-example-modal-lg">Borrar</button>
+
+            </td>
+          </tr>
+            
+        </tbody>
+      </table>
+  </div>
+</div>
+
+<!-- Se anexa el pie de pagina -->
+<app-footer></app-footer>
+
+<!-- Ventana modal Larga. Nota: debe tener las etiquetas de javascript de boostrap -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" >
+    <div class="modal-content" style="background-color: rgba(30, 30, 30, .800)">
+      <div class="modal-header" >Encabezado Modal
+        <button class="close" data-dismiss="modal" aria-label="Close" >&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <form (ngSubmit)="agregarItemEditado()">
+            <div class="row">
+              <div class="col" >
+                <input type="" name="id" class="form-control form-control-sm" [(ngModel)]="datos.id">
+                <label for="formGroupExampleInput">Codigo de inventario Cantv</label>
+                <input type="text" name="codigo" class="form-control form-control-sm" [(ngModel)]="datos.codigo" placeholder="Codigo de inventario Cantv" />
+              </div>
+              <div class="col">
+                <label for="formGroupExampleInput">Marca</label>
+                <input type="text" name="marca"  class="form-control form-control-sm" [(ngModel)]="datos.marca"  placeholder="Marca del equipo"/>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <label for="formGroupExampleInput">Modelo</label>
+                <input type="text" name="modelo" class="form-control form-control-sm" [(ngModel)]="datos.modelo" placeholder="Modelo del equipo"/>
+              </div>
+              <div class="col">
+                <label for="formGroupExampleInput">Numeracion de Rack</label>
+                <input type="text" name="rack"   class="form-control form-control-sm" [(ngModel)]="datos.rack"   placeholder="numero de rack"/>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-3">
+                <label for="formGroupExampleInput">Numero de U del rack</label>
+                <input type="text" name="u_rack" class="form-control form-control-sm" [(ngModel)]="datos.u_rack" placeholder="U de rack"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                  <button class="btn btn-primary mt-3 btn-sm" type="submit" >Guardar</button>
+              </div>
+            </div>
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger btn-sm" data-dismiss="modal" >Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
